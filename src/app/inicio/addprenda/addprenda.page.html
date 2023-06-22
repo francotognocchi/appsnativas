@@ -1,0 +1,47 @@
+<ion-header>
+  <ion-toolbar color="ny">
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/inicio"></ion-back-button>
+    </ion-buttons>
+    <ion-title>Agregar nueva prenda</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-row>
+    <ion-col>
+      <ion-card>
+        <ion-card-header>NUEVA PRENDA</ion-card-header>
+        <ion-card-content>
+          <form [formGroup]="form" (keyup.enter)="saveNewPrenda()">
+          <ion-item>
+            <ion-label position="floating">Prenda</ion-label>
+            <ion-input formControlName="title" type="text" placeholder="Explica que prenda queres vender" #title></ion-input>
+          </ion-item>
+          <ion-item>
+            <ion-label position="floating">Imágen</ion-label>
+            <ion-input formControlName="imageURL" type="url" placeholder="Agregale una buena foto para que la gente la vea" #imageURL></ion-input>
+            <span *ngIf="form.controls.imageURL.invalid && form.controls.imageURL.touched"
+            [ngStyle]="{'color':'red'}"> {{getimageURLMessage()}} </span>
+          </ion-item>
+          <ion-item>
+            <ion-label position="floating">Categoría</ion-label>
+            <ion-input formControlName="subtitle" type="text" placeholder="Categoría de la prenda" #subtitle></ion-input>
+            <span *ngIf="form.controls.subtitle.invalid && form.controls.subtitle.touched"
+            [ngStyle]="{'color':'red'}"> {{getsubtitleMessage()}} </span>
+          </ion-item>
+          <ion-item counter="true">
+            <ion-label position="floating">Descripción</ion-label>
+            <ion-input maxlength="1000" formControlName="description" type="text" placeholder="Conta un poco sobre la prenda" #description></ion-input>
+          </ion-item>
+          <h2>->Todos los campos son obligatorios.</h2>
+            <ion-buttons>
+            <ion-button  [disabled]="!form.valid" (click)="saveNewNoticia()"><ion-icon name="send"></ion-icon>| ENVIAR</ion-button>
+            </ion-buttons>
+          </form>
+        </ion-card-content>
+      </ion-card>
+    </ion-col>
+  </ion-row>
+
+</ion-content>

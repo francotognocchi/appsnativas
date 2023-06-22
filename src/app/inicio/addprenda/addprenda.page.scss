@@ -1,0 +1,23 @@
+ion-content{
+    --background: rgb(255, 255, 255);
+}
+
+ion-toolbar{
+    background-color: rgb(151, 151, 151);
+}
+
+ion-button{
+    --background: rgba(151, 151, 151, 0.588);
+    --background-activated: black;
+    color: black;
+    margin: 20px;
+}
+
+ion-card-header{
+    text-align: center;
+    text-decoration: underline;
+    font-style: oblique;
+    color: black;
+    font-size: large;
+    padding-top: 40px;
+}

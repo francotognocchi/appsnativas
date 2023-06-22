@@ -1,0 +1,26 @@
+<ion-header>
+  <ion-toolbar color="medium">
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title color="dark">Favoritas</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <h4>Tus prendas favoritas</h4>
+
+  <ion-card>
+    <ion-img></ion-img>
+    <ion-card-header>
+      <ion-card-title>Nombre de la prenda</ion-card-title>
+      <ion-card-subtitle>Categoría</ion-card-subtitle>
+    </ion-card-header>
+    <ion-card-content>
+      <p>Descripcion de la prenda</p>
+      <ion-button class="but" size="small" (click)="presentToast()"><ion-icon name="heart-dislike"></ion-icon>Eliminar de favoritos</ion-button>
+    </ion-card-content>
+  </ion-card>
+
+</ion-content>

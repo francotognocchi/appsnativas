@@ -1,0 +1,47 @@
+ion-toolbar{
+    background-color: var(--ion-color-ny);
+}
+
+ion-content{
+    --background: rgb(255, 255, 255);
+}
+
+h4{
+    text-align: center;
+    text-decoration: underline;
+    font-style: oblique;
+    color: white;
+}
+
+.cat{
+    color: var(--ion-color-ny);
+}
+
+ion-button{
+    --background: rgba(151, 151, 151, 0.588);
+    --background-activated: black;
+    color: black;
+    padding-bottom: 5px;
+}
+
+ion-card-subtitle{
+    color: rgba(110, 6, 6, 0.929);
+    text-align: center;
+    margin-top: 5px;
+}
+
+ion-card-title{
+    text-align: center;
+}
+
+p{
+    text-align: center;
+}
+
+ion-card-content{
+    text-align: center;
+}
+
+.but{
+    margin-top: 10px;
+}
